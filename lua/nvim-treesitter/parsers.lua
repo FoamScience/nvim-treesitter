@@ -433,13 +433,14 @@ list.hcl = {
   used_by = { "terraform" },
 }
 
--- FIXME(vigoux): markdown is broken for now
--- list.markdown = {
---   install_info = {
---     url = "https://github.com/ikatyang/tree-sitter-markdown",
---     files = { "src/parser.c", "src/scanner.cc" },
---   }
--- }
+list.markdown = {
+  install_info = {
+    url = "https://github.com/MDeiml/tree-sitter-markdown",
+    files = { "src/parser.c", "src/scanner.cc" },
+    branch = "main",
+  },
+  experimental = true,
+}
 
 list.tlaplus = {
   install_info = {
@@ -791,6 +792,7 @@ list.http = {
   },
   maintainers = { "@NTBBloodbath" },
 }
+
 list.prisma = {
   install_info = {
     url = "https://github.com/victorhqc/tree-sitter-prisma",
@@ -813,6 +815,15 @@ list.foam = {
   -- Queries might change over time on the grammar's side
   -- Otherwise everything runs fine
   experimental = true,
+}
+
+list.make = {
+  install_info = {
+    url = "https://github.com/alemuller/tree-sitter-make",
+    branch = "main",
+    files = { "src/parser.c" },
+  },
+  maintainers = { "@lewis6991" },
 }
 
 local M = {
